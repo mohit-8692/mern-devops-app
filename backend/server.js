@@ -11,7 +11,7 @@ app.use((req, res, next) => {
     next();
 });
 // Database Connection (Local MongoDB)
-mongoose.connect('mongodb://127.0.0.1:27017/mern_db')
+mongoose.connect('mongodb://mongo:27017/mern_db')
     .then(() => console.log("DB Connected"))
     .catch(err => console.log(err));
 
