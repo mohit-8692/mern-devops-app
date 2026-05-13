@@ -6,11 +6,11 @@ function App() {
   const [input, setInput] = useState('');
 
   useEffect(() => {
-    axios.get('api/data').then(res => setItems(res.data));
+    axios.get('http://localhost:5000/api/data').then(res => setItems(res.data));
   }, []);
 
   const handleSubmit = () => {
-    axios.post('api/data', { name: input }).then(res => {
+    axios.post('http://localhost:5000/api/data', { name: input }).then(res => {
       setItems([...items, res.data]);
       setInput('');
     });
