@@ -23,7 +23,7 @@ const Item = mongoose.model('Item', ItemSchema);
 app.get('/api/data', async (req, res) => {
     const items = await Item.find();
     res.json(items);
-});git
+});
 
 app.post('/api/data', async (req, res) => {
     const newItem = new Item({ name: req.body.name });
