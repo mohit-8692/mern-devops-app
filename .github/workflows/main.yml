@@ -1,0 +1,25 @@
+name: mern app
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy
+      cancel-in-progress: true
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v6.0.3
+        
+      - name: install dependecy
+        uses: npm install
+
+      - name: create build
+        uses: npm run build
+
+      - name: deploy
+        uses: echo "hi its deploying"
+      
+      
+  
