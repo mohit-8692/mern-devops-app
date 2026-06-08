@@ -13,13 +13,13 @@ jobs:
         uses: actions/checkout@v6.0.3
         
       - name: install dependecy
-        uses: npm install
+        run: npm install
 
       - name: create build
-        uses: npm run build
+        run: npm run build
 
       - name: deploy
-        uses: echo "hi its deploying"
+        run: echo "hi its deploying"
       
       
   
